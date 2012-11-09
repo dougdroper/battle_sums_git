@@ -1,0 +1,36 @@
+<head>
+  <title>battle_sums_git</title>
+</head>
+
+<body>
+  <h1>!Battle SUMS!</h1>
+  {{> name}}
+  {{> users}}
+</body>
+
+
+
+<template name="name">
+  {{#if show_name }}
+  <div id="name">
+    {{greeting}}
+    <input type="input" id="myname">
+    <input type="button" value="Submit" id="start_game" />
+  </div>
+  {{/if}}
+</template>
+
+
+<template name="users">
+  {{#if show_users }}
+  <div id="name">
+    <p>Current users:</p>
+    <ul>
+    {{#each players}}
+      <li>{{name}}</li>
+    {{/each}}
+    </ul>
+  </div>
+  {{/if}}
+</template>
+
